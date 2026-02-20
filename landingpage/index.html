@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minha Landing — Início</title>
+  <meta name="description" content="Landing page modular com HTML, CSS e JavaScript separados.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <!-- Header injetado -->
+  <div id="site-header" data-partial="partials/header.html"></div>
+  <main>
+    <section class="hero container">
+      <div class="hero-content">
+        <h1>Crie Sites Profissionais do Zero</h1>
+        <p>Estrutura modular, performance e reutilização em todas as páginas.</p>
+        <div class="hero-actions">
+            <a href="sobre.html" class="btn btn-lg">Conheça o Projeto</a>
+          <button class="btn btn-outline btn-lg" data-action="mostrar-alerta">Ver demonstração</button>
+        </div>
+      <div class="hero-image">
+        <img src="assets/img/imagem.png" alt="Imagem ilustrativa">
+      </div>
+    </section>
+    <section class="features container">
+      <article>
+        <h3>Head limpo</h3>
+        <p>Metadados, fontes e estilos centralizados no arquivo da página.</p>
+      </article>
+      <article>
+        <h3>Header & Footer reutilizáveis</h3>
+        <p>Um único ponto de manutenção para navegação e rodapé.</p>
+      </article>
+      <article>
+        <h3>JS enxuto</h3>
+        <p>Carregamento dinâmico e interações desacopladas do HTML.</p>
+      </article>
+    </section>
+  </main>
+  <!-- Footer injetado -->
+  <div id="site-footer" data-partial="partials/footer.html"></div>
+</body>
+</html>

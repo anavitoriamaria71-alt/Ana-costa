@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minha Landing — Sobre</title>
+  <meta name="description" content="Entenda como a landing é construída de forma modular.">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+
+  <div id="site-header" data-partial="partials/header.html"></div>
+
+  <main class="container stack-lg">
+    <h1>Sobre o Projeto</h1>
+    <p>Esta landing demonstra a separação de responsabilidades entre HTML, CSS e JS, 
+       com header e footer como partials reutilizados.</p>
+
+    <section class="card">
+      <h2>Objetivos da Aula</h2>
+      <ul class="checklist">
+        <li>Separar CSS e JS em arquivos próprios</li>
+        <li>Importar header e footer em todas as páginas</li>
+        <li>Manter semântica, acessibilidade e SEO</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="site-footer" data-partial="partials/footer.html"></div>
+
+</body>
+</html>
