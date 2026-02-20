@@ -1,0 +1,197 @@
+/* ====== Reset e Variáveis ====== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{
+  --brand: #ec4899;        /* rosa principal */
+  --brand-dark: #be185d;   /* rosa mais escuro */
+  --accent: #f9a8d4;       /* rosa claro */
+  --bg: #fff1f7;           /* fundo rosado bem suave */
+  --text: #3f3f46;
+  --muted: #71717a;
+  --card: #ffffff;
+  --border: #fbcfe8;
+  --radius: 16px;
+}
+
+/* ====== Base ====== */
+html, body { height: 100%; }
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+.container { width: min(1200px, 92%); margin-inline: auto; }
+
+/* ====== Header ====== */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--brand-dark);
+  letter-spacing: 1px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: color .3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--brand);
+}
+
+/* ====== Hero ====== */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 6rem 0;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.2rem, 2.5vw + 1rem, 3.5rem);
+  font-weight: 900;
+  color: var(--brand-dark);
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-top: 1rem;
+}
+
+.hero-actions {
+  margin-top: 1.8rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-image {
+  min-height: 300px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #fbcfe8, #f9a8d4);
+  border: 1px solid var(--border);
+}
+
+/* ====== Produtos ====== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.features article {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.features article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(236, 72, 153, 0.2);
+}
+
+.features h3 {
+  margin-bottom: .5rem;
+  color: var(--brand-dark);
+}
+
+.features p {
+  color: var(--muted);
+}
+
+/* ====== Botões ====== */
+.btn {
+  background: var(--brand);
+  color: #fff;
+  padding: .9rem 1.4rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.btn:hover {
+  background: var(--brand-dark);
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--brand);
+  color: var(--brand);
+}
+
+.btn-outline:hover {
+  background: var(--brand);
+  color: #fff;
+}
+
+/* ====== Footer ====== */
+.site-footer {
+  margin-top: 4rem;
+  background: var(--brand-dark);
+  color: #fff;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.site-footer a {
+  color: #fce7f3;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.2);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: .9rem;
+}
+
+/* ====== Responsividade ====== */
+@media (max-width: 900px){
+  .hero { grid-template-columns: 1fr; text-align: center; }
+  .features { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
